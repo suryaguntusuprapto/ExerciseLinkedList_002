@@ -26,8 +26,8 @@ void CircularLinkedList::addNode() { //write your answer here
 	string nama;
 	cout << "Enter roll number of the students: ";
 	cin >> nim;
-	cin.ignore();
-	getline(cin, nama);
+	cout << "Enter roll name of the students: ";
+	cin >> nama;
 	Node* newNode = new Node();
 	newNode->rollNumber = nim;
 	newNode->name = nama;
@@ -88,7 +88,7 @@ bool CircularLinkedList::delNode() { //write your answer here
 	}
 	else {
 		Node* surya = LAST->next;
-		Node* suprapto = LAST->next->next;
+		Node* suprapto = LAST->next;
 
 		if (surya == LAST) {
 			LAST = NULL;
